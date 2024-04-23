@@ -29,6 +29,7 @@ echo "Done installing bloat!"
 echo "moving config..."
 
 cp wallpaper config/hypr -r
+mkdir -p ~/.config
 cp -r config/* ~/.config/
 
 echo "Configuring shell, if you want to use anything other then fish and starship, you have 5 sec to hit ctrl+c"
