@@ -1,7 +1,7 @@
 # Dotfile
 
 # Demo:
-![demo](https://raw.githubusercontent.com/cutebear0123/dotfiles/main/trash/demo.mp4)
+<img src="https://raw.githubusercontent.com/cutebear0123/dotfiles/main/trash/demo.gif" />
 
 # Read the script and config, if something bad happend, that is your fault.
 
