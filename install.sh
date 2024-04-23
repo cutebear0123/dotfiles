@@ -36,5 +36,7 @@ echo "Configuring shell, if you want to use anything other then fish and starshi
 sleep 5
 sudo dnf install fish -y
 curl -sS https://starship.rs/install.sh | sh
+mkdir -p ~/.config/fish
+touch ~/.config/fish/config.fish
 echo "starship init fish | source" >> ~/.config/fish/config.fish
 chsh -s $(which fish)
