@@ -16,6 +16,7 @@ sudo dnf install git golang -y
 python -m pip install pyprland
 
 cd /tmp/
+rm -rf cliphist
 git clone https://github.com/sentriz/cliphist
 cd cliphist
 go build
