@@ -4,6 +4,7 @@ set -e
 echo "Checking for python 3.11, if exit before saying \"python 3.11 installed\" then you need to install python 3.11"
 python -c "import sys; exit(sys.version_info.minor<11)"
 echo "python 3.11 installed"
+python -m pip 1> /dev/null
 
 sudo dnf copr enable solopasha/hyprland -y
 sudo dnf install -y hyprland hyprshot

@@ -14,5 +14,5 @@
 3. put the so file in config/hypr
 4. run script
 5. install `alexowl.transparent-color-theme` on vscode if you like transparent theme
-6. install neofetch and google neofetch themes
+6. install neofetch and google neofetch themes and flex to your friends if you have friends
 7. go touch some grass
