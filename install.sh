@@ -15,6 +15,7 @@ sudo dnf install git golang -y
 
 python -m pip install pyprland
 
+path=$(pwd)
 cd /tmp/
 rm -rf cliphist
 git clone https://github.com/sentriz/cliphist
@@ -22,6 +23,7 @@ cd cliphist
 go build
 sudo mv cliphist /usr/bin/
 
+cd $path
 echo "Done installing bloat!"
 
 echo "moving config..."
