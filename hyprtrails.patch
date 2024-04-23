@@ -1,0 +1,26 @@
+diff --git a/hyprtrails/trail.cpp b/hyprtrails/trail.cpp
+index 47ac6a0..3f653e1 100644
+--- a/hyprtrails/trail.cpp
++++ b/hyprtrails/trail.cpp
+@@ -4,6 +4,12 @@
+ #include <hyprland/src/desktop/Window.hpp>
+ 
+ #include "globals.hpp"
++#include <iostream>
++#include <cstdlib> 
++#include <ctime> 
++
++#define RAND01 ((float)rand() / (float)RAND_MAX)
++
+ 
+ void CTrail::onTick() {
+     static auto* const PHISTORYSTEP   = (Hyprlang::INT* const*)HyprlandAPI::getConfigValue(PHANDLE, "plugin:hyprtrails:history_step")->getDataStaticPtr();
+@@ -242,7 +248,7 @@ void CTrail::draw(CMonitor* pMonitor, float a) {
+                             (m_pWindow->m_vRealPosition.value().x + m_pWindow->m_vRealSize.value().x) / pMonitor->vecSize.x,
+                             (m_pWindow->m_vRealPosition.value().y + m_pWindow->m_vRealSize.value().y) / pMonitor->vecSize.y};
+     glUniform4f(g_pGlobalState->trailShader.gradient, thisboxopengl.x, thisboxopengl.y, thisboxopengl.w, thisboxopengl.h);
+-    glUniform4f(g_pGlobalState->trailShader.color, COLOR.r, COLOR.g, COLOR.b, COLOR.a);
++    glUniform4f(g_pGlobalState->trailShader.color, RAND01, RAND01, RAND01, COLOR.a);
+ 
+     CBox transformedBox = monbox;
+     transformedBox.transform(wlr_output_transform_invert(g_pHyprOpenGL->m_RenderData.pMonitor->transform), g_pHyprOpenGL->m_RenderData.pMonitor->vecTransformedSize.x,
